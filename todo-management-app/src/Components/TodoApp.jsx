@@ -1,32 +1,54 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import './TodoApp.css';
 
 const TodoApp = () => {
-    const [task,setTask] = useState("");
-    const [todos,setTodos] = useState([]);
-    const changeHandler = e =>{
-        setTask(e.target.value)
-    }
-    const submitHandler = e =>{
-        e.preventDefault();
-        const newTodos = [...todos,task];
-        setTodos(newTodos);
-        setTask("");
-    }
-    return (
-        <div>
-            <center>
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">Todo Management Application</h5>
-                        <form>
-                            <input type="text" name="task" />&nbsp;&nbsp;
-                            <input type="submit" value="Add" name="Add" />
-                        </form>
-                    </div>
-                </div>
-            </center>
-        </div>
-    )
-}
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
 
-export default TodoApp
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  const handleAddTodo = () => {
+    if (input.trim()) {
+      setTodos([...todos, { text: input, completed: false }]);
+      setInput('');
+    }
+  };
+
+  const handleToggleTodo = (index) => {
+    const newTodos = todos.map((todo, i) =>
+      i === index ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(newTodos);
+  };
+
+  const handleDeleteTodo = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
+  return (
+    <div className="App">
+      <h1>Todo Management Application</h1>
+      <div>
+        <input
+          type="text"
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Add a new todo"
+        />
+        <button className='add' onClick={handleAddTodo}>Add</button>
+      </div>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+            <span onClick={() => handleToggleTodo(index)}>{todo.text}</span>
+            <button className='delete' onClick={() => handleDeleteTodo(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TodoApp;
