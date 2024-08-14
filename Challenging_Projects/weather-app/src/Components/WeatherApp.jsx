@@ -7,7 +7,7 @@ import clear_icon from "../assets/cloud-lightning-rain.svg"
 
 const WeatherApp = () => {
 
-  const inputRef = useRef()
+  const inputRef = useRef();
   const [weatherData, setWeatherDate] = useState(false);
 
   const allIcons = {
@@ -25,7 +25,7 @@ const WeatherApp = () => {
     "10n": clear_icon,
     "13d": clear_icon,
     "13n": clear_icon,
-  }
+  };
 
   const search = async (city) => {
     if (city === "") {
@@ -33,12 +33,13 @@ const WeatherApp = () => {
       return;
     }
     try {
-      const url = "https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}";
+      const apiKey = "f5f027d9f3c5eda1dc124481ac92faee";
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
       const response = await fetch(url);
       const data = await response.json();
 
-      if(!response.ok){
+      if (!response.ok) {
         alert(data.message);
         return;
       }
@@ -50,49 +51,51 @@ const WeatherApp = () => {
         windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
-        icon: icon
-      })
+        icon: icon,
+      });
     } catch (error) {
       setWeatherDate(false);
       console.error("Error in fetching weather data");
     }
-  }
+  };
 
   useEffect(() => {
     search("London");
   }, []);
+
   return (
     <div className="weather">
       <div className="search-bar">
         <input ref={inputRef} type="text" placeholder="Search" />
         <img src={search_icon} alt="" onClick={() => search(inputRef.current.value)} />
       </div>
-      {weatherData ? <>
-        <img src={weatherData.icon} alt="" className="weather-icon" />
-        <p className="temperature">{weatherData.temperature}°C</p>
-        <p className="location">{weatherData.location}</p>
-        <div className="weather-data">
+      {weatherData ? (
+        <>
+          <img src={weatherData.icon} alt="" className="weather-icon" />
+          <p className="temperature">{weatherData.temperature}°C</p>
+          <p className="location">{weatherData.location}</p>
+          <div className="weather-data">
 
-          <div className="col">
-            <img src={humidity_icon} alt="" />
-            <div>
-              <p>{weatherData.humidity} %</p>
-              <span>Humidity</span>
+            <div className="col">
+              <img src={humidity_icon} alt="" />
+              <div>
+                <p>{weatherData.humidity} %</p>
+                <span>Humidity</span>
+              </div>
+            </div>
+
+            <div className="col">
+              <img src={wind_icon} alt="" />
+              <div>
+                <p>{weatherData.windSpeed} Km/h</p>
+                <span>Wind Speed</span>
+              </div>
             </div>
           </div>
-
-          <div className="col">
-            <img src={wind_icon} alt="" />
-            <div>
-              <p>{weatherData.windSpeed} Km/h</p>
-              <span>Wind Speed</span>
-            </div>
-          </div>
-        </div>
-      </> : <></>}
-
+        </>
+      ) : <></>}
     </div>
-  )
-}
+  );
+};
 
-export default WeatherApp
+export default WeatherApp;
