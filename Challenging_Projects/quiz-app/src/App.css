@@ -1,0 +1,48 @@
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.quiz-container, .result-container {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option-button.selected {
+  background-color: #d1e7fd;
+}
+
+.next-button, .restart-button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-button:hover, .restart-button:hover {
+  background-color: #0056b3;
+}
