@@ -29,14 +29,12 @@ const FormValidation = () => {
 
     const { fullName, phoneNo, emailId, message } = formValues;
 
-    // Regular expressions for validation
     const namePattern = /^[a-zA-Z\s]+$/;
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const phonePattern = /^\d{10}$/;
 
     let errors = {};
 
-    // Validate form fields
     if (!fullName || !namePattern.test(fullName)) {
       errors.fullName = "Name invalid. Only letters and spaces allowed.";
     }
@@ -57,7 +55,6 @@ const FormValidation = () => {
 
     if (Object.keys(errors).length === 0) {
       alert("Form submitted successfully!");
-      // Add form submission logic here
     }
   };
 
