@@ -40,7 +40,7 @@ function PasswordStrength() {
   return (
     <div style={{ marginLeft: "400px", marginTop: "50px", width: "500px", height: "auto" }}>
       <div style={{ marginRight: "20px", color: "green", textAlign: "center" }}>
-        <h2>19. Password Strength Testing</h2>
+        <h2> Password Strength Testing</h2>
       </div>
       <div>
         <label htmlFor="password">Enter your password:</label>
