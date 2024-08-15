@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import QuizApp from './Components/QuizApp';
+import SimpleCalendar from './Components/SimpleCalendar';
 
 function App() {
   return (
     <div className="App">
-      <QuizApp/>
+      <SimpleCalendar/>
     </div>
   );
 }

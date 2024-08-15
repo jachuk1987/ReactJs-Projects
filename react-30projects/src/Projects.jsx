@@ -3,6 +3,8 @@ import WeatherApp from "./Components/WeatherApp";
 import TodoList from "./Components/TodoLIst";
 import GeneratePassword from "./Components/GeneratePassword";
 import Notepad from "./Components/NotePad";
+import QuizApp from "./Components/QuizApp";
+import AgeCalculator from "./Components/AgeCalculator";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -13,10 +15,10 @@ export default class Projects extends Component {
 
                 { name: "Weather App", value: "WeatherApp" },
                 { name: "Todo list", value: "TodoList" },
-                // { name: "Quiz-App", value: "QuizApp" },
+                { name: "Quiz-App", value: "QuizApp" },
                 { name: "GeneratePassword", value: "GeneratePassword" },
                 { name: "Notepad", value: "Notepad" },
-                // { name: "Age-Calculator", value: "AgeCalculator" },
+                { name: "Age-Calculator", value: "AgeCalculator" },
                 // { name: "Quote_Generator", value: "QuoteGenerator" },
                 // { name: "QRCode_Generator", value: "QRCodeGenerator" },
                 // { name: "Tost-Notification", value: "TostNotification" },
@@ -33,7 +35,7 @@ export default class Projects extends Component {
                 // { name: "Text to Voice", value: "TextToVoice" },
                 // { name: "Website Coming Soon", value: "WebsiteComingSoon" },
                 // { name: "BackGround Change", value: "BackGroundChange" },
-                // { name: "Simple Calaender", value: "SimpleCalaender" },
+                // { name: "Simple Calendar", value: "SimpleCalendar" },
                 // { name: "Drop-Down", value: "DropDown" },
                 // { name: "CircularProgressBar", value: "CircularProgressBar" },
                 // { name: "Product Page Design", value: "ProductPageDesign" },
@@ -58,10 +60,14 @@ export default class Projects extends Component {
                 return <WeatherApp />;
             case "TodoList":
                 return <TodoList />;
+            case "QuizApp":
+                return <QuizApp />;
             case "GeneratePassword":
                 return <GeneratePassword />;
             case "Notepad":
                 return <Notepad />;
+            case "AgeCalculator":
+                return <AgeCalculator />;
             // case "WeatherApp":
             //     return <WeatherApp />;
         }
@@ -95,7 +101,7 @@ export default class Projects extends Component {
                     </select>
                 </form>
                 {this.showSelectedComponent()}
-                
+
             </div>
         );
     }

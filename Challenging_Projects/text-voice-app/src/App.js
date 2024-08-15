@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import QuizApp from './Components/QuizApp';
+import TextToVoice from './Components/TextToVoice';
 
 function App() {
   return (
     <div className="App">
-      <QuizApp/>
+      <TextToVoice/>
     </div>
   );
 }
