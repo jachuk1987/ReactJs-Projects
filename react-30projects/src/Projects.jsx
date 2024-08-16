@@ -54,7 +54,7 @@ export default class Projects extends Component {
                 { name: "BackGround Change", value: "BackGroundChange" },
                 { name: "Simple Calendar", value: "SimpleCalendar" },
                 // { name: "Drop-Down", value: "DropDown" },
-                // { name: "CircularProgressBar", value: "CircularProgressBar" },
+                // { name: "Progress Bar", value: "ProgressBar" },
                 // { name: "Product Page Design", value: "ProductPageDesign" },
                 // { name: "Crypto Currency", value: "CryptoCurrency" },
                 // { name: "Digital Clock", value: "DigitalClock" },
