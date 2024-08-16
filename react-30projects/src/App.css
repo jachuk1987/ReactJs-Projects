@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  /* min-height: 100vh;
+  display: grid;
+  background: #e2d4ff; */
 }
 
 .App-logo {
@@ -44,12 +47,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.App {
-  min-height: 100vh;
-  display: grid;
-  background: #e2d4ff;
 }
 
 .weather {
@@ -125,7 +122,7 @@
 
 /* TodoList */
 
-.App {
+.App1 {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -151,11 +148,11 @@ button {
   color: white;
 }
 
-button.add {
+button.add1 {
   background-color: #007bff;
 }
 
-button.add:hover {
+button.add1:hover {
   background-color: #0056b3;
 }
 
@@ -271,6 +268,164 @@ body {
   background: #ff9393;
 }
 
+/* GeneratePassword */
+
+
+.container1 {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.generated-password {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  word-break: break-all;
+}
+
+
+/* NotePad */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container2 {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cf9aff, #95c0ff);
+  color: #fff;
+  padding-top: 4%;
+  padding-left: 10%;
+}
+
+.container2 h1 {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.container2 h1 img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.container2 button img {
+  width: 25px;
+  margin-right: 8px;
+}
+
+.container2 button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#9418fd, #571094);
+  color: #fff;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  padding: 15px 25px;
+  margin: 30px 0 20px;
+  cursor: pointer;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.note {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.note img {
+  position: absolute;
+  width: 25px;
+  cursor: pointer;
+  bottom: 15px;
+  right: 15px;
+}
+
+.input-box {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: #333;
+  font-family: inherit;
+  font-size: 16px;
+  /* overflow-wrap: break-word; */
+}
+
+
 /* AgeCalculator */
 
 
@@ -281,7 +436,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.container3 {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #4203a9, #90bafc);
@@ -345,4 +500,106 @@ body {
 #result {
   font-size: 24px;
   margin-top: 20px;
+}
+
+/* QuoteGenerator */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bbc6fa;
+}
+
+.quote-box {
+  background: #fff;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: '';
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+}
+
+.quote-box span {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+.quote-box span::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+.quote-box div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-box button {
+  background: rgb(23, 124, 229);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.quote-box button img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.quote-box button:nth-child(2) {
+  background: transparent;
+  color: #333;
 }

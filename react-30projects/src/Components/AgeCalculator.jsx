@@ -52,7 +52,7 @@ export default class AgeCalculator extends Component {
         const { birthDate, ageResult } = this.state;
 
         return (
-            <div className="container">
+            <div className="container3">
                 <div className="calculator">
                     <h1>
                         JavaScript <br /> <span>Age Calculator</span>

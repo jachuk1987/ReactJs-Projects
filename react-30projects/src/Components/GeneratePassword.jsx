@@ -46,7 +46,7 @@ class GeneratePassword extends Component {
     const { password, length, includeNumbers, includeSymbols } = this.state;
 
     return (
-      <div className="container">
+      <div className="container1">
         <h1>Password Generator</h1>
         <div>
           <label>Password Length:</label>

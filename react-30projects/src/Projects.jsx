@@ -5,6 +5,7 @@ import GeneratePassword from "./Components/GeneratePassword";
 import Notepad from "./Components/NotePad";
 import QuizApp from "./Components/QuizApp";
 import AgeCalculator from "./Components/AgeCalculator";
+import QuoteGenerator from "./Components/QuoteGenerator";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class Projects extends Component {
                 { name: "GeneratePassword", value: "GeneratePassword" },
                 { name: "Notepad", value: "Notepad" },
                 { name: "Age-Calculator", value: "AgeCalculator" },
-                // { name: "Quote_Generator", value: "QuoteGenerator" },
+                { name: "Quote_Generator", value: "QuoteGenerator" },
                 // { name: "QRCode_Generator", value: "QRCodeGenerator" },
                 // { name: "Tost-Notification", value: "TostNotification" },
                 // { name: "Music_Player", value: "MusicPlayer" },
@@ -68,6 +69,10 @@ export default class Projects extends Component {
                 return <Notepad />;
             case "AgeCalculator":
                 return <AgeCalculator />;
+            case "QuoteGenerator":
+                return <QuoteGenerator />;
+            // case "WeatherApp":
+            //     return <WeatherApp />;
             // case "WeatherApp":
             //     return <WeatherApp />;
         }

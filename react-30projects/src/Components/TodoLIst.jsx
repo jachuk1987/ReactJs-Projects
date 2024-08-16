@@ -41,7 +41,7 @@ class TodoList extends Component {
     const { todos, input } = this.state;
 
     return (
-      <div className="App">
+      <div className="App1">
         <h1>Todo Management Application</h1>
         <div>
           <input
@@ -50,7 +50,7 @@ class TodoList extends Component {
             onChange={this.handleInputChange}
             placeholder="Add a new todo"
           />
-          <button className="add" onClick={this.handleAddTodo}>Add</button>
+          <button className="add1" onClick={this.handleAddTodo}>Add</button>
         </div>
         <ul>
           {todos.map((todo, index) => (

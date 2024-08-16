@@ -47,7 +47,7 @@ class Notepad extends Component {
     const { notes } = this.state;
 
     return (
-      <div className="container">
+      <div className="container2">
         <h1>
           <img src={card_icon} alt="Notes Icon" />
           Notes
