@@ -20,6 +20,8 @@ import EmailList from "./Components/EmailList";
 import PasswordStrength from "./Components/PasswordStrength";
 import TextToVoice from "./Components/TextToVoice";
 import WebsiteComingSoon from "./Components/WebsiteComingSoon";
+import BackGroundChange from "./Components/BackGroundChange";
+import SimpleCalendar from "./Components/SimpleCalendar";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -50,7 +52,7 @@ export default class Projects extends Component {
                 { name: "Text to Voice", value: "TextToVoice" },
                 { name: "Website Coming Soon", value: "WebsiteComingSoon" },
                 { name: "BackGround Change", value: "BackGroundChange" },
-                // { name: "Simple Calendar", value: "SimpleCalendar" },
+                { name: "Simple Calendar", value: "SimpleCalendar" },
                 // { name: "Drop-Down", value: "DropDown" },
                 // { name: "CircularProgressBar", value: "CircularProgressBar" },
                 // { name: "Product Page Design", value: "ProductPageDesign" },
@@ -113,10 +115,10 @@ export default class Projects extends Component {
                 return <TextToVoice />;
             case "WebsiteComingSoon":
                 return <WebsiteComingSoon />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
+            case "BackGroundChange":
+                return <BackGroundChange />;
+            case "SimpleCalendar":
+                return <SimpleCalendar />;
             // case "WeatherApp":
             //     return <WeatherApp />;
             // case "WeatherApp":

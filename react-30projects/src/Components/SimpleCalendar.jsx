@@ -73,7 +73,5 @@ const styles = {
         padding: '10px',
         backgroundColor: 'white',
         color: 'black',
-        
-        
     },
 };
