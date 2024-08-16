@@ -14,6 +14,9 @@ import Calculator from "./Components/Calculator";
 import PopUp from "./Components/PopUp";
 import PasswordToggle from "./Components/PasswordToggle";
 import WebSiteDarkMode from "./Components/WebSiteDarkMode";
+import Validation from "./Components/Validation";
+import ImageGallery from "./Components/ImageGallery";
+import EmailList from "./Components/EmailList";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -37,9 +40,9 @@ export default class Projects extends Component {
                 { name: "PopUp", value: "PopUp" },
                 { name: "Password-Toggle", value: "PasswordToggle" },
                 { name: "WebSiteDarkMode", value: "WebSiteDarkMode" },
-                // { name: "Validation", value: "Validation" },
-                // { name: "Image Gallery", value: "ImageGallery" },
-                // { name: "Email List", value: "EmailList" },
+                { name: "Validation", value: "Validation" },
+                { name: "Image Gallery", value: "ImageGallery" },
+                { name: "Email List", value: "EmailList" },
                 // { name: "Password Strength", value: "PasswordStrength" },
                 // { name: "Text to Voice", value: "TextToVoice" },
                 // { name: "Website Coming Soon", value: "WebsiteComingSoon" },
@@ -95,12 +98,12 @@ export default class Projects extends Component {
                 return <PasswordToggle />;
             case "WebSiteDarkMode":
                 return <WebSiteDarkMode />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
+            case "Validation":
+                return <Validation />;
+            case "ImageGallery":
+                return <ImageGallery />;
+            case "EmailList":
+                return <EmailList />;
             // case "WeatherApp":
             //     return <WeatherApp />;
             // case "WeatherApp":
