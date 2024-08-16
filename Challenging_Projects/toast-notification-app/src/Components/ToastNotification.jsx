@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ToastNotification.css"; // You can add the CSS in a separate file or use inline styles
+import "./ToastNotification.css";
 
 const ToastNotification = () => {
     const [toasts, setToasts] = useState([]);
