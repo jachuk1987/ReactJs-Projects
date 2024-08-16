@@ -1168,3 +1168,22 @@ body {
   cursor: pointer;
   transform: scale(1.1);
 }
+
+/* PasswordStrength */
+
+.strength {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.weak {
+  color: red;
+}
+
+.medium {
+  color: orange;
+}
+
+.strong {
+  color: green;
+}

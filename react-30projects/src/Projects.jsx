@@ -17,6 +17,9 @@ import WebSiteDarkMode from "./Components/WebSiteDarkMode";
 import Validation from "./Components/Validation";
 import ImageGallery from "./Components/ImageGallery";
 import EmailList from "./Components/EmailList";
+import PasswordStrength from "./Components/PasswordStrength";
+import TextToVoice from "./Components/TextToVoice";
+import WebsiteComingSoon from "./Components/WebsiteComingSoon";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -43,10 +46,10 @@ export default class Projects extends Component {
                 { name: "Validation", value: "Validation" },
                 { name: "Image Gallery", value: "ImageGallery" },
                 { name: "Email List", value: "EmailList" },
-                // { name: "Password Strength", value: "PasswordStrength" },
-                // { name: "Text to Voice", value: "TextToVoice" },
-                // { name: "Website Coming Soon", value: "WebsiteComingSoon" },
-                // { name: "BackGround Change", value: "BackGroundChange" },
+                { name: "Password Strength", value: "PasswordStrength" },
+                { name: "Text to Voice", value: "TextToVoice" },
+                { name: "Website Coming Soon", value: "WebsiteComingSoon" },
+                { name: "BackGround Change", value: "BackGroundChange" },
                 // { name: "Simple Calendar", value: "SimpleCalendar" },
                 // { name: "Drop-Down", value: "DropDown" },
                 // { name: "CircularProgressBar", value: "CircularProgressBar" },
@@ -104,6 +107,20 @@ export default class Projects extends Component {
                 return <ImageGallery />;
             case "EmailList":
                 return <EmailList />;
+            case "PasswordStrength":
+                return <PasswordStrength />;
+            case "TextToVoice":
+                return <TextToVoice />;
+            case "WebsiteComingSoon":
+                return <WebsiteComingSoon />;
+            // case "WeatherApp":
+            //     return <WeatherApp />;
+            // case "WeatherApp":
+            //     return <WeatherApp />;
+            // case "WeatherApp":
+            //     return <WeatherApp />;
+            // case "WeatherApp":
+            //     return <WeatherApp />;
             // case "WeatherApp":
             //     return <WeatherApp />;
             // case "WeatherApp":
