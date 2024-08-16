@@ -8,6 +8,8 @@ import AgeCalculator from "./Components/AgeCalculator";
 import QuoteGenerator from "./Components/QuoteGenerator";
 import QRCodeGenerator from "./Components/QRCodeGenerator";
 import ToastNotification from "./Components/TostNotification";
+import MusicPlayer from "./Components/MusicPlayer";
+import StopWatch from "./Components/StopWatch";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -25,8 +27,8 @@ export default class Projects extends Component {
                 { name: "Quote_Generator", value: "QuoteGenerator" },
                 { name: "QRCode_Generator", value: "QRCodeGenerator" },
                 { name: "Tost-Notification", value: "TostNotification" },
-                // { name: "Music_Player", value: "MusicPlayer" },
-                // { name: "StopWatch", value: "StopWatch" },
+                { name: "Music_Player", value: "MusicPlayer" },
+                { name: "StopWatch", value: "StopWatch" },
                 // { name: "Calculator", value: "Calculator" },
                 // { name: "PopUp", value: "PopUp" },
                 // { name: "Password-Toggle", value: "PasswordToggle" },
@@ -77,10 +79,10 @@ export default class Projects extends Component {
                 return <QRCodeGenerator />;
             case "TostNotification":
                 return <ToastNotification />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
+            case "MusicPlayer":
+                return <MusicPlayer />;
+            case "StopWatch":
+                return <StopWatch />;
             // case "WeatherApp":
             //     return <WeatherApp />;
             // case "WeatherApp":
