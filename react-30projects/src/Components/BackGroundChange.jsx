@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../Components/BackGroundChange.css";
+import "../App.css";
 import orig_icon from "../assets/original.jpg";
 import jona_icon from "../assets/jonatan-pie-3l3RwQdHRHg-unsplash.jpg";
 import xMuI_icon from "../assets/1_xMuIOwjliGUPjkzukeWKfw.jpg";

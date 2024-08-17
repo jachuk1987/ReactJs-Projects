@@ -22,6 +22,13 @@ import TextToVoice from "./Components/TextToVoice";
 import WebsiteComingSoon from "./Components/WebsiteComingSoon";
 import BackGroundChange from "./Components/BackGroundChange";
 import SimpleCalendar from "./Components/SimpleCalendar";
+import DropDown from "./Components/DropDown";
+import ProgressBar from "./Components/ProgressBar";
+import ProductPageDesign from "./Components/ProductPageDesign";
+import CryptoCurrency from "./Components/CryptoCurrency";
+import DigitalClock from "./Components/DigitalClock";
+import DragAndDrop from "./Components/DragAndDrop";
+import ImageSearchEngine from "./Components/ImageSearchEngine";
 
 export default class Projects extends Component {
     constructor(props) {
@@ -53,13 +60,13 @@ export default class Projects extends Component {
                 { name: "Website Coming Soon", value: "WebsiteComingSoon" },
                 { name: "BackGround Change", value: "BackGroundChange" },
                 { name: "Simple Calendar", value: "SimpleCalendar" },
-                // { name: "Drop-Down", value: "DropDown" },
-                // { name: "Progress Bar", value: "ProgressBar" },
-                // { name: "Product Page Design", value: "ProductPageDesign" },
-                // { name: "Crypto Currency", value: "CryptoCurrency" },
-                // { name: "Digital Clock", value: "DigitalClock" },
-                // { name: "Drag & Drop", value: "DragAndDrop" },
-                // { name: "Image search Engine", value: "ImageSearchEngine" }
+                { name: "Drop-Down", value: "DropDown" },
+                { name: "Progress Bar", value: "ProgressBar" },
+                { name: "Product Page Design", value: "ProductPageDesign" },
+                { name: "Crypto Currency", value: "CryptoCurrency" },
+                { name: "Digital Clock", value: "DigitalClock" },
+                { name: "Drag & Drop", value: "DragAndDrop" },
+                { name: "Image search Engine", value: "ImageSearchEngine" }
             ],
             selectedProject: "",
         };
@@ -119,18 +126,20 @@ export default class Projects extends Component {
                 return <BackGroundChange />;
             case "SimpleCalendar":
                 return <SimpleCalendar />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
-            // case "WeatherApp":
-            //     return <WeatherApp />;
+            case "DropDown":
+                return <DropDown />;
+            case "ProgressBar":
+                return <ProgressBar />;
+            case "ProductPageDesign":
+                return <ProductPageDesign />;
+            case "CryptoCurrency":
+                return <CryptoCurrency />;
+            case "DigitalClock":
+                return <DigitalClock />;
+            case "DragAndDrop":
+                return <DragAndDrop />;
+            case "ImageSearchEngine":
+                return <ImageSearchEngine />;
         }
 
         // if(this.state.selectedProject === "WeatherApp"){
