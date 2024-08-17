@@ -21,12 +21,12 @@ export default class CryptoCurrency extends Component {
       header: {
         display: 'flex',
         width: '100%',
-        marginLeft: '150px',
-        marginTop: '30px',
+        marginLeft: '100px',
+        marginTop: '20px',
       },
       ul: {
         display: 'flex',
-        marginRight: '200px',
+        marginRight: '100px',
         listStyle: 'none',
         padding: 0,
       },
@@ -44,7 +44,7 @@ export default class CryptoCurrency extends Component {
       },
       main: {
         display: 'flex',
-        marginLeft: '200px',
+        marginLeft: '100px',
       },
       block1: {
         marginBottom: '30px',
@@ -64,7 +64,7 @@ export default class CryptoCurrency extends Component {
       block2: {
         display: 'flex',
         marginLeft: '500px',
-        width: '600px',
+        width: '900px',
         marginTop: '150px',
       },
       card: {

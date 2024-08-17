@@ -47,8 +47,8 @@ export default class DragAndDrop extends Component {
         border: '2px solid red',
         padding: '10px',
         margin: 'auto',
-        height: '160px',
-        width: '200px',
+        height: '200px',
+        width: '230px',
       },
       item: {
         width: '180px',

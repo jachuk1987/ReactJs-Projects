@@ -50,7 +50,7 @@ export default class ImageSearchEngine extends Component {
     const { results } = this.state;
     const styles = {
       searchForm: {
-        marginLeft: '500px',
+        marginLeft: '100px',
         marginTop: '50px',
       },
       searchResult: {

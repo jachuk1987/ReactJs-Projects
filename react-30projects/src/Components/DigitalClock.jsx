@@ -9,7 +9,8 @@ export default class DigitalClock extends Component {
       seconds: '',
       date: '',
       month: '',
-      year: ''
+      year: '',
+      ampm: '',
     };
   }
 
@@ -23,18 +24,26 @@ export default class DigitalClock extends Component {
 
   updateTime() {
     const currentTime = new Date();
+    let hours = currentTime.getHours();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert 24-hour time to 12-hour time
+    hours = hours % 12;
+    hours = hours ? hours : 12; // The hour '0' should be '12'
+
     this.setState({
-      hours: currentTime.getHours().toString().padStart(2, '0'),
+      hours: hours.toString().padStart(2, '0'),
       minutes: currentTime.getMinutes().toString().padStart(2, '0'),
       seconds: currentTime.getSeconds().toString().padStart(2, '0'),
       date: currentTime.getDate().toString().padStart(2, '0'),
       month: (currentTime.getMonth() + 1).toString().padStart(2, '0'), // Months are zero-indexed
-      year: currentTime.getFullYear()
+      year: currentTime.getFullYear(),
+      ampm: ampm,
     });
   }
 
   render() {
-    const { hours, minutes, seconds, date, month, year } = this.state;
+    const { hours, minutes, seconds, date, month, year, ampm } = this.state;
     const styles = {
       timer: {
         display: 'flex',
@@ -86,6 +95,9 @@ export default class DigitalClock extends Component {
           </div>
           <div id="box3" style={styles.timerDiv}>
             <h2 id="sec">{seconds}</h2>
+          </div>
+          <div id="box4" style={styles.timerDiv}>
+            <h2 id="ampm">{ampm}</h2>
           </div>
         </div>
       </div>

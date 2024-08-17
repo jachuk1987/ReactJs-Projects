@@ -7,7 +7,7 @@ export default class ProductPageDesign extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedImage: './image1.png',
+      selectedImage: './image7.png',
       selectedSize: '',
       selectedColor: '',
       quantity: 1,
