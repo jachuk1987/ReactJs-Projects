@@ -1135,7 +1135,7 @@ body {
 /* ImageGallery */
 
 body {
-  background-color: black;
+  /* background-color: black; */
 }
 
 .gallery {
@@ -1271,7 +1271,7 @@ body {
 }
 
 body {
-  background: #e3edf7;
+  /* background: #e3edf7; */
   height: 100vh;
   display: flex;
   align-items: center;
