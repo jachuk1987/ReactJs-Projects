@@ -3,41 +3,23 @@ import { QRCodeSVG } from 'qrcode.react';
 import '../Components/QrCodeWithImage.css';
 
 const QRCodeGenerator = () => {
+  const [imageURL, setImageURL] = useState('');
   const [qrText, setQrText] = useState('');
-  const [imageData, setImageData] = useState(null);
 
+  // Simulate image upload and get URL
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        resizeImage(reader.result); // Resize image and convert to base64
-      };
-      reader.readAsDataURL(file); // Read the file as a data URL (base64)
+      // Here, you'd normally upload the file to a server and get the URL
+      // For this example, we'll simulate a URL creation
+      const simulatedURL = URL.createObjectURL(file); // Replace with your image hosting service URL
+      setImageURL(simulatedURL);
     }
   };
 
-  const resizeImage = (base64Str) => {
-    const img = new Image();
-    img.src = base64Str;
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const maxWidth = 300; // Set max width or height
-      const scaleSize = maxWidth / img.width;
-      canvas.width = maxWidth;
-      canvas.height = img.height * scaleSize;
-
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      const resizedBase64 = canvas.toDataURL('image/jpeg', 0.7); // Resize and compress the image
-      setImageData(resizedBase64);
-    };
-  };
-
   const generateQR = () => {
-    if (imageData) {
-      setQrText(imageData); // Set resized base64 string as QR code content
+    if (imageURL) {
+      setQrText(imageURL); // Use the URL as the QR code content
     } else {
       alert('Please upload an image');
     }
