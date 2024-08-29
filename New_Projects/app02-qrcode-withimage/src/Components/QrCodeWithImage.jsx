@@ -1,84 +1,64 @@
 import React, { useState } from 'react';
-import QRCode from 'qrcode.react';
+import { QRCodeSVG } from 'qrcode.react';
 import '../Components/QrCodeWithImage.css';
-
-// Import local images
-import image1 from '../assets/image1.png';
-import image2 from '../assets/image2.png';
-import image3 from '../assets/image3.png';
 
 const QRCodeGenerator = () => {
   const [qrText, setQrText] = useState('');
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [imageData, setImageData] = useState(null);
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        resizeImage(reader.result); // Resize image and convert to base64
+      };
+      reader.readAsDataURL(file); // Read the file as a data URL (base64)
+    }
+  };
+
+  const resizeImage = (base64Str) => {
+    const img = new Image();
+    img.src = base64Str;
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const maxWidth = 300; // Set max width or height
+      const scaleSize = maxWidth / img.width;
+      canvas.width = maxWidth;
+      canvas.height = img.height * scaleSize;
+
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      const resizedBase64 = canvas.toDataURL('image/jpeg', 0.7); // Resize and compress the image
+      setImageData(resizedBase64);
+    };
+  };
 
   const generateQR = () => {
-    if (qrText.length > 0) {
-      // QR code generation logic
+    if (imageData) {
+      setQrText(imageData); // Set resized base64 string as QR code content
     } else {
-      alert('Please enter text or URL');
+      alert('Please upload an image');
     }
   };
 
   return (
     <div className="container">
-      <p>Enter your text or URL</p>
-      <input
-        type="text"
-        placeholder="Text or URL"
-        value={qrText}
-        onChange={(e) => setQrText(e.target.value)}
-      />
-      <div id="imgBox">
-        <div style={{ position: 'relative', display: 'inline-block', marginTop: '20px' }}>
-          <QRCode
-            value={qrText || " "}
-            size={256}
-            includeMargin={true}
-            renderAs="svg"
-            level="H"
-          />
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Overlay"
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '50px',
-                height: '50px',
-                borderRadius: '50%',
-              }}
-            />
-          )}
-        </div>
-      </div>
+      <p>Upload an image to generate its QR code</p>
+      <input type="file" accept="image/*" onChange={handleImageUpload} />
       <button onClick={generateQR}>Generate QR Code</button>
 
-      <div style={{ marginTop: '20px' }}>
-        <p>Select a local image to overlay:</p>
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <img
-            src={image1}
-            alt="Image 1"
-            className="selectable-image"
-            onClick={() => setSelectedImage(image1)}
-          />
-          <img
-            src={image2}
-            alt="Image 2"
-            className="selectable-image"
-            onClick={() => setSelectedImage(image2)}
-          />
-          <img
-            src={image3}
-            alt="Image 3"
-            className="selectable-image"
-            onClick={() => setSelectedImage(image3)}
+      {qrText && (
+        <div id="imgBox" style={{ marginTop: '20px' }}>
+          <QRCodeSVG
+            value={qrText}
+            size={256}
+            includeMargin={true}
+            level="H"
           />
         </div>
-      </div>
+      )}
     </div>
   );
 };

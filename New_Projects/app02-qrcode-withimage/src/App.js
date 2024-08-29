@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import QRCodeWithImage from './Components/QrCodeWithImage';
-
+import QRCodeGenerator from './Components/QrCodeWithImage';
 
 function App() {
   return (
     <div className="App">
-      <QRCodeWithImage/>
+      <QRCodeGenerator/>
     </div>
   );
 }
