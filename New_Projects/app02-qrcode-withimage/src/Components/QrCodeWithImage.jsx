@@ -6,20 +6,17 @@ const QRCodeGenerator = () => {
   const [imageURL, setImageURL] = useState('');
   const [qrText, setQrText] = useState('');
 
-  // Simulate image upload and get URL
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      // Here, you'd normally upload the file to a server and get the URL
-      // For this example, we'll simulate a URL creation
-      const simulatedURL = URL.createObjectURL(file); // Replace with your image hosting service URL
+      const simulatedURL = URL.createObjectURL(file);
       setImageURL(simulatedURL);
     }
   };
 
   const generateQR = () => {
     if (imageURL) {
-      setQrText(imageURL); // Use the URL as the QR code content
+      setQrText(imageURL);
     } else {
       alert('Please upload an image');
     }
