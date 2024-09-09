@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import QRCode from 'qrcode.react';
 import './App.css';
 
-// Import your local images
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
