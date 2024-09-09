@@ -12,7 +12,6 @@ const QRCodeWithImage = () => {
 
   const generateQR = () => {
     if (qrText.length > 0) {
-      // QR code generation logic remains the same
     } else {
       alert('Please enter text or URL');
     }
