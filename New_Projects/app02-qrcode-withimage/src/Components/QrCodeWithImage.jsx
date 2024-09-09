@@ -37,7 +37,7 @@ const QRCodeGenerator = () => {
             level="H"
           />
         </div>
-      )}
+      )};
     </div>
   );
 };
