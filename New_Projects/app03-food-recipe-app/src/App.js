@@ -8,6 +8,6 @@ function App() {
       <FoodRecipe/>
     </div>
   );
-}
+};
 
 export default App;
