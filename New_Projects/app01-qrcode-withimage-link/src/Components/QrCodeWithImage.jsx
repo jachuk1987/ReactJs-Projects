@@ -49,7 +49,7 @@ const QRCodeWithImage = () => {
                 borderRadius: '50%',
               }}
             />
-          )}
+          )};
         </div>
       </div>
       <button onClick={generateQR}>Generate QR Code</button>
