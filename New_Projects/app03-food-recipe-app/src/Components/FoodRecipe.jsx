@@ -24,7 +24,7 @@ const FoodRecipe = () => {
             </form>
             {data.length >= 1 ? <Products data={data} /> : null}
         </div>
-    )
+    );
 };
 
 export default FoodRecipe;
